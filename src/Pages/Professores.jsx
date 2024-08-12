@@ -151,72 +151,75 @@ function Professores() {
 
            
        
-           
-
             <section className="min-h-[65vh] min-w-[98vw] 4xl:mt-[-5vh] flex justify-center item-center p-12 sm:p-4 relative drop-shadow-xl">
-                <Switch
-                    className="absolute top-4 left-12"
-                    onToggle={handleToggleSwitch}
-                />
+    <Switch
+        className="absolute top-4 left-12 cursor-pointer"
+        onToggle={handleToggleSwitch}
+    />
 
-                <div className=" mt-6 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12">
-                    {filteredProfessoresCourse.map((professor) => (
-                        <div
-                            key={professor.id}
-                            className="bg-inblack p-6 flex flex-col items-center justify-center rounded-md h-auto w-full lg:max-w-4xl max-w-card-width"
+    <div className="mt-6 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12">
+        {filteredProfessoresCourse.map((professor) => (
+            <div
+                key={professor.id}
+                className={`bg-inblack p-6 flex flex-col items-center justify-center rounded-md h-auto w-full lg:max-w-4xl max-w-card-width ${
+                    isSwitchedOn && professor.area !== 'TECH' && professor.area !== 'CRIAT'
+                        ? ' opacity-70' // Torna a área mais escura quando não está ativa
+                        : ''
+                }`}
+            >
+                <div className="flex items-center justify-between mb-6">
+                    <p className="text-lg tracking-widest font-bebas">
+                        CRIATIVO 
+                    </p>
+                    <div className="flex">
+                        {[...Array(1)].map((_, i) => (
+                            <BiInfinite
+                                key={i}
+                                size={20}
+                                style={{ color: "#E53F2E" }}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <img className="h-auto w-auto mb-3" src={professor.imgUrl} alt={professor.nome} />
+                <h4 className="font-extrabold text-xl mb-2 text-inred">
+                    {professor.nome}
+                </h4>
+                <p className="text-md font-extralight mb-6">
+                    {professor.formacao}
+                </p>
+                <div className="flex items-center gap-3">
+                    {professor.rede && professor.rede.split(", ").map((rede, i) => (
+                        <a
+                            key={i}
+                            href={rede}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <div className="flex items-center justify-between mb-6">
-                                <p className="text-lg tracking-widest font-bebas">
-                                    {professor.area}
-                                </p>
-                                <div className="flex">
-                                    {[...Array(5)].map((_, i) => (
-                                        <BiInfinite
-                                            key={i}
-                                            size={20}
-                                            style={{ color: "#E53F2E" }}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-                            <img className="h-auto w-auto mb-2" src={professor.imgUrl} alt="" />
-                            <h4 className="font-extrabold text-xl mb-2 text-inred">
-                                {professor.nome}
-                            </h4>
-                            <p className="text-md font-extralight mb-6">
-                                {professor.formacao}
-                            </p>
-                            <div className="flex items-center gap-3">
-                                {professor.rede && professor.rede.split(", ").map((rede, i) => (
-                                    <a
-                                        key={i}
-                                        href={rede}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <FaInstagramSquare
-                                            size={24}
-                                            style={{ color: "#292929" }}
-                                        />
-                                    </a>
-                                ))}
-
-                            </div>
-                            <div className="mt-4 flex items-center gap-6">
-                                <div className="flex items-center gap-1">
-                                    <p>07</p>
-                                    <BiInfinite size={24} style={{ color: "#E53F2E" }} />
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <p>05</p>
-                                    <BiInfinite size={24} style={{ color: "#E53F2E" }} />
-                                </div>
-                            </div>
-                        </div>
+                            <FaInstagramSquare
+                                size={24}
+                                style={{ color: "#292929" }}
+                            />
+                        </a>
                     ))}
                 </div>
+                <div className="mt-4 flex items-center gap-6">
+                    <div className="flex items-center gap-1">
+                        <p>07</p>
+                        <BiInfinite size={24} style={{ color: "#E53F2E" }} />
+                    </div>
+                    <div className="flex items-center gap-1">
+                        <p>05</p>
+                        <BiInfinite size={24} style={{ color: "#E53F2E" }} />
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
 
-            </section>
+
+            
         </div>
     );
 }

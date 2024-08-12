@@ -34,7 +34,14 @@ function Alunos() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="fixed inset-0 bg-red-600 flex items-center justify-center text-white">
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 border-4 border-t-4 border-white border-solid rounded-full animate-spin"></div>
+          <p className="mt-4 text-lg bg-red-600 text-white p-2 rounded">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
@@ -45,14 +52,14 @@ function Alunos() {
     <div className="bg-inblack text-white min-h-[100vh] text-blue">
        <button
                 onClick={() => navigate('/')}
-                className="mt-8 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
+                className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
               >
                 Home
               </button> 
       
       <div className="container mx-auto py-16">
       
-        <h2 className="text-2xl font-bold mb-4 text-center uppercase">Buscar Aluno</h2>
+        <h2 className="text-2xl  font-bold mb-4 text-center uppercase">Buscar Aluno</h2>
         <div className="flex justify-center mb-4 px-6">
           <input
             type="text"
@@ -61,7 +68,7 @@ function Alunos() {
             onChange={e => setSearchToken(e.target.value)}
             className="text-[black] w-full max-w-lg h-10 px-4 py-1 mr-2 rounded-md border border-gray-300 placeholder-black tracking-wider"
           />
-          <button onClick={buscarAlunoPorToken} className="px-4 py-2 bg-inred uppercase text-white w-[10rem] rounded-md">Buscar</button>
+          <button onClick={buscarAlunoPorToken} className=" px-4 py-2 bg-inred hover:bg-red-700 uppercase text-white w-[10rem] rounded-md  transition-colors duration-300">Buscar</button>
         </div>
 
         {alunoEncontrado && (
@@ -104,7 +111,6 @@ function Alunos() {
         )}
       </div>
     </div>
-    
   );
 }
 
