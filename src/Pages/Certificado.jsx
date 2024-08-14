@@ -36,7 +36,7 @@ function Alunos() {
 
     const aluno = alunos.find((aluno) => aluno.token === searchToken);
     if(!aluno){
-      setError('') 
+      setError('Erro') 
       return
     }
     console.log("searchToken", aluno);
@@ -57,17 +57,19 @@ function Alunos() {
   }
 
   if (error) {
-    return   <div class="bg-grey-lightest border-l-4 border-red p-4 py-6 rounded shadow-lg flex items-center justify-between mb-6" role="alert">
-    <span class="fa-stack fa-2x sm:mr-2 mb-3">
-        <i class="fas fa-circle text-red-dark fa-stack-2x"></i>
-        <i class="fas fa-hand-paper fa-stack-1x text-white"></i>
-    </span>
-    <div class="sm:text-left text-center sm:mb-0 mb-3 w-128">
-        <p class="font-bold mb-1 text-lg">Token Inválido</p>
-        <p class="text-grey-dark inline-block">Seu Token Não Foi Encontrado em nosso Banco de Dados, Tente Novamente</p>
+    return  <body class="flex flex-col justify-center items-center h-screen bg-blue-lightest">
+    <div class="bg-grey-lightest border-l-4 border-red p-4 py-6 rounded shadow-lg flex items-center justify-between mb-6" role="alert">
+        <span class="fa-stack fa-2x sm:mr-2 mb-3">
+            <i class="fas fa-circle text-red-dark fa-stack-2x"></i>
+            <i class="fas fa-hand-paper fa-stack-1x text-white"></i>
+        </span>
+        <div class="sm:text-left text-center sm:mb-0 mb-3 w-128">
+            <p class="font-bold mb-1 text-lg">Token Inválido.</p>
+            <p class="text-grey-dark inline-block">Seu Token não foi Encontrado em nosso Banco de Dados, Tente Novamente.</p>
+        </div>
+        <i class="fas fa-times mx-4 fa-2x text-grey-darker"></i>
     </div>
-    <i class="fas fa-times mx-4 fa-2x text-grey-darker"></i>
-</div>;
+</body>
   }
 
   return (
@@ -101,7 +103,7 @@ function Alunos() {
 
         {alunoEncontrado && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-center items-center">
-            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-16 py-8 gap-5 bg-inallblack w-[55vw] h-[40vh]">
+            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-16 py-8 gap-5 bg-inallblack w-[55vw] h-[50vh]">
               <div className="flex flex-row items-center justify-between">
                 <h3 className="text-xl font-bold mb-2 uppercase">
                   Detalhes do Aluno
