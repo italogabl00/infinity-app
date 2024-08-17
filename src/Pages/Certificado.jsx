@@ -69,7 +69,14 @@ function Alunos() {
         </div>
         <i class="fas fa-times mx-4 fa-2x text-grey-darker"></i>
     </div>
-</body>
+    <button
+        onClick={() => navigate("/")}
+        className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
+      >
+        Voltar
+      </button>
+    
+    </body>
   }
 
   return (
@@ -117,7 +124,7 @@ function Alunos() {
               </div>
               <div className="flex flex-col justify-evenly h-42 gap-10">
                 <div className="flex items-center">
-                  <p className="flex justify-between w-52">
+                  <p className="flex justify-between w-56">
                     <span className="font-bold">Nome:</span>
                     <span>{alunoEncontrado.nome}</span>
                   </p>
@@ -131,7 +138,7 @@ function Alunos() {
                     <span className="font-bold">Ano:</span>
                     <span>{alunoEncontrado.data.substring(0, 10)}</span>
                   </p>
-                  <p className="flex justify-between w-42">
+                  <p className="flex justify-between w-40  ">
                     <span className="font-bold">CPF:</span>
                     <span>{alunoEncontrado.cpf}</span>
                   </p>
