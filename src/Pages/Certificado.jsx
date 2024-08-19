@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FiXOctagon } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
+
 function Alunos() {
   const [alunos, setAlunos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -78,9 +79,12 @@ function Alunos() {
     
     </body>
   }
-
+  
   return (
-    <div className="bg-inblack text-white min-h-[100vh] text-blue">
+   
+     
+    <div className="bg-inblack text-white min-h-[100vh] text-blue bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10">
+   
       <button
         onClick={() => navigate("/")}
         className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
@@ -156,11 +160,15 @@ function Alunos() {
                 {alunoEncontrado.token}
               </p>
             </div>
+            
           </div>
         )}
       </div>
     </div>
+    
+    
   );
 }
+
 
 export default Alunos;

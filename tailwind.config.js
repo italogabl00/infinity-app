@@ -42,7 +42,9 @@ export default {
       '2xl': '42rem',
       'card-width': '100vh', // Defina a largura do card aqui
     },
-    extend: {},
+    extend: {
+      'fundo-test': './public/imagens/fundo.jpg'
+    },
   },
   plugins: [],
 }
