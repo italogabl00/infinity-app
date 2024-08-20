@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiXOctagon } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import Logo from '../components/Logo.jsx';
+import Inf from '../components/Inf'
 
 
 function Alunos() {
@@ -83,14 +83,11 @@ function Alunos() {
   
   return (
     <div className="bg-inblack text-white min-h-[100vh] bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-center justify-start">
-      <button
-        onClick={() => navigate("/")}
-        className="mt-8 text-white bg-indred hover:bg-inred px-6 py-2 rounded-md font-bold mb-8"
-      >
-        Home
-      </button>
+    <Inf />
+
+     
       
-      <div className="container mx-auto py-16 mt-32">
+      <div className="container mx-auto py-16 mt-10">
         <h2 className="text-2xl font-bold mb-4 text-center uppercase">
           Buscar Aluno
         </h2>
