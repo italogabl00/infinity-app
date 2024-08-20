@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiXOctagon } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import Logo from '../components/Logo.jsx';
 
 
 function Alunos() {
@@ -81,19 +82,16 @@ function Alunos() {
   }
   
   return (
-   
-     
-    <div className="bg-inblack text-white min-h-[100vh] text-blue bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10">
-   
+    <div className="bg-inblack text-white min-h-[100vh] bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-center justify-start">
       <button
         onClick={() => navigate("/")}
-        className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
+        className="mt-8 text-white bg-indred hover:bg-inred px-6 py-2 rounded-md font-bold mb-8"
       >
         Home
       </button>
-
-      <div className="container mx-auto py-16">
-        <h2 className="text-2xl  font-bold mb-4 text-center uppercase">
+      
+      <div className="container mx-auto py-16 mt-32">
+        <h2 className="text-2xl font-bold mb-4 text-center uppercase">
           Buscar Aluno
         </h2>
         <div className="flex justify-center mb-4 px-6">
@@ -106,12 +104,14 @@ function Alunos() {
           />
           <button
             onClick={buscarAlunoPorToken}
-            className=" px-4 py-2 bg-inred hover:bg-red-700 uppercase text-white w-[10rem] rounded-md  transition-colors duration-300"
+            className="px-4 py-2 bg-indred hover:bg-inred uppercase text-white w-[10rem] rounded-md transition-colors duration-300"
           >
             Buscar
           </button>
         </div>
 
+        
+  
         {alunoEncontrado && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-center items-center">
             <div className="flex flex-col relative border border-solid border-inred rounded-xl px-16 py-8 gap-5 bg-inallblack w-[55vw] h-[50vh]">
@@ -142,7 +142,7 @@ function Alunos() {
                     <span className="font-bold">Ano:</span>
                     <span>{alunoEncontrado.data.substring(0, 10)}</span>
                   </p>
-                  <p className="flex justify-between w-40  ">
+                  <p className="flex justify-between w-40">
                     <span className="font-bold">CPF:</span>
                     <span>{alunoEncontrado.cpf}</span>
                   </p>
@@ -160,14 +160,12 @@ function Alunos() {
                 {alunoEncontrado.token}
               </p>
             </div>
-            
           </div>
         )}
       </div>
     </div>
-    
-    
   );
+  
 }
 
 
