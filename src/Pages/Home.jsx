@@ -13,8 +13,8 @@ function Home() {
 
                 <div className='relative sm:flex sm:flex-col sm:justify-center sm:items-center sm:px-1 2xl:px-16 4xl:px-28 py-6'>
                     <Logo />
-
-                    <div className='mt-60 max-w-lg sm:flex sm:flex-col sm:justify-center sm:items-center sm:max-w-4/5'>
+                    
+                    <div className='mt-56 max-w-lg sm:flex sm:flex-col sm:justify-center sm:items-center sm:max-w-4/5'>
 
                         <h3 className='text-5xl tracking-widest sm:tracking-wide sm:text-4xl sml:text-3xl 4xl:mb-[-3vw] lg:mb-[-6vw]'>CONHEÇA <span className='text-inred'>NOSSA</span></h3>
 

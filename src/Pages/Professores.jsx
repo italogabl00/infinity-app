@@ -145,7 +145,7 @@ function Professores() {
                     </ul>
                 </div>
             )}
-            <h1 className=" text-[220px] lg:text-[160px] lg:mt-6 md:text-[120px] md:mt-8 sm:text-[75px] sm:mt-12 sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm mb-5 font-bebas">
+            <h1 className=" mt-8 text-[220px] lg:text-[160px] lg:mt-6 md:text-[120px] md:mt-8 sm:text-[75px] sm:mt-12 sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm mb-5 font-bebas">
                 PROFESSORES
             </h1>
 
