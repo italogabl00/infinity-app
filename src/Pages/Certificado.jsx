@@ -72,7 +72,7 @@ function Alunos() {
         <i class="fas fa-times mx-4 fa-2x text-grey-darker"></i>
     </div>
     <button
-        onClick={() => navigate('/certificado')}
+        onClick={() => navigate('/')}
         className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
       >
         Voltar
@@ -92,20 +92,26 @@ function Alunos() {
           Buscar Aluno
         </h2>
         <div className="flex justify-center mb-4 px-6">
-          <input
-            type="text"
-            placeholder="Digite o token do aluno..."
-            value={searchToken}
-            onChange={(e) => setSearchToken(e.target.value)}
-            className="text-[black] w-full max-w-lg h-10 px-4 py-1 mr-2 rounded-md border border-gray-300 placeholder-black tracking-wider"
-          />
-          <button
-            onClick={buscarAlunoPorToken}
-            className="px-4 py-2 bg-indred hover:bg-inred uppercase text-white w-[10rem] rounded-md transition-colors duration-300"
-          >
-            Buscar
-          </button>
-        </div>
+  <input
+    type="text"
+    placeholder="Digite o token do aluno..."
+    value={searchToken}
+    onChange={(e) => setSearchToken(e.target.value)}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter') {
+        buscarAlunoPorToken();
+      }
+    }}
+    className="text-[black] w-full max-w-lg h-10 px-4 py-1 mr-2 rounded-md border border-gray-300 placeholder-black tracking-wider"
+  />
+  <button
+    onClick={buscarAlunoPorToken}
+    className="px-4 py-2 bg-indred hover:bg-inred uppercase text-white w-[10rem] rounded-md transition-colors duration-300"
+  >
+    Buscar
+  </button>
+</div>
+
 
         
   
@@ -125,13 +131,13 @@ function Alunos() {
               </div>
               <div className="flex flex-col justify-evenly h-42 gap-10">
                 <div className="flex items-center">
-                  <p className="flex justify-between w-40">
-                    <span className="font-bold">Nome:</span>
+                  <p className="flex justify-between w-50">
+                    <span className="font-bold w-20">Nome:</span>
                     <span>{alunoEncontrado.nome}</span>
                   </p>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="flex justify-between w-40">
+                  <p className="flex justify-between w-28 ">
                     <span className="font-bold">Turma:</span>
                     <span>{alunoEncontrado.turma}</span>
                   </p>
@@ -145,10 +151,10 @@ function Alunos() {
                   </p>
                 </div>
                 <div className="flex text-left flex-col py-1">
-                  <p>
-                    <span className="font-bold w-[100%] text-left">
+                  <p className="flex justify-between w-46">
+                    <span className="font-bold">
                       Módulos:
-                    </span>{""}
+                    </span>
                     {alunoEncontrado.modulo}
                   </p>
                 </div>
