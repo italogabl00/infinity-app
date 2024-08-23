@@ -72,11 +72,14 @@ function Alunos() {
         <i class="fas fa-times mx-4 fa-2x text-grey-darker"></i>
     </div>
     <button
-        onClick={() => navigate('/')}
-        className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
-      >
-        Voltar
-      </button>
+    onClick={() => {
+        navigate('/temp');
+        setTimeout(() => navigate('/certificado'), 0); 
+    }}
+    className="mt-4 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
+>
+    Voltar
+</button>
     
     </body>
   }
