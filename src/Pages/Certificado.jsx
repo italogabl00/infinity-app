@@ -117,52 +117,50 @@ function Alunos() {
   
         {alunoEncontrado && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-center items-center">
-            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-16 py-8 gap-5 bg-inallblack w-[50vw] h-[40vh]">
-              <div className="flex flex-row items-center justify-between">
-                <h3 className="text-xl font-bold mb-2 uppercase">
-                  Detalhes do Aluno
-                </h3>
-                <button
-                  onClick={() => setAlunoEncontrado(null)}
-                  className="max-w-max"
-                >
-                  <FiXOctagon className="h-full w-8" />
-                </button>
-              </div>
-              <div className="flex flex-col justify-evenly h-42 gap-10">
-                <div className="flex items-center">
-                  <p className="flex justify-between w-50">
-                    <span className="font-bold w-20">Nome:</span>
-                    <span>{alunoEncontrado.nome}</span>
-                  </p>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="flex justify-between w-28 ">
-                    <span className="font-bold">Turma:</span>
-                    <span>{alunoEncontrado.turma}</span>
-                  </p>
-                  <p className="flex justify-between w-36">
-                    <span className="font-bold">Ano:</span>
-                    <span>{alunoEncontrado.data.substring(0, 10)}</span>
-                  </p>
-                  <p className="flex justify-between w-40">
-                    <span className="font-bold">CPF:</span>
-                    <span>{alunoEncontrado.cpf}</span>
-                  </p>
-                </div>
-                <div className="flex text-left flex-col py-1">
-                  <p className="flex justify-between w-46">
-                    <span className="font-bold">
-                      Módulos:
-                    </span>
-                    {alunoEncontrado.modulo}
-                  </p>
-                </div>
-              </div>
-              <p className="text-inred absolute font-extralight bottom-6 right-8 text-sm">
-                {alunoEncontrado.token}
-              </p>
-            </div>
+            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-8 py-6 gap-6 bg-inallblack w-[50vw] h-[40vh]">
+  <div className="flex items-center justify-between mb-4">
+    <h3 className="text-xl font-bold uppercase">
+      Detalhes do Aluno
+    </h3>
+    <button
+      onClick={() => setAlunoEncontrado(null)}
+      className="p-2 rounded-full hover:bg-inred/20 transition"
+    >
+      <FiXOctagon className="w-6 h-6 text-inred" />
+    </button>
+  </div>
+  <div className="flex flex-col justify-around h-full">
+    <div className="flex items-center justify-between">
+      <p className="flex-1">
+        <span className="font-bold">Nome:</span>
+        <span className="ml-2">{alunoEncontrado.nome}</span>
+      </p>
+    </div>
+    <div className="flex items-center justify-between">
+      <p className="flex-1">
+        <span className="font-bold">Turma:</span>
+        <span className="ml-2">{alunoEncontrado.turma}</span>
+      </p>
+      <p className="flex-1">
+        <span className="font-bold">Ano:</span>
+        <span className="ml-2">{alunoEncontrado.data.substring(0, 10)}</span>
+      </p>
+      <p className="flex-1">
+        <span className="font-bold">CPF:</span>
+        <span className="ml-2">{alunoEncontrado.cpf}</span>
+      </p>
+    </div>
+    <div className="flex items-center">
+      <p className="flex-1">
+        <span className="font-bold">Módulos:</span>
+        <span className="ml-2">{alunoEncontrado.modulo}</span>
+      </p>
+    </div>
+  </div>
+  <p className="text-inred absolute font-extralight bottom-4 right-6 text-xs">
+    {alunoEncontrado.token}
+  </p>
+</div>
           </div>
         )}
       </div>
