@@ -19,8 +19,8 @@ function Alunos() {
       );
       if (!dataStudentList.ok) return;
       const responseStudentList = await dataStudentList.json();
-
-      console.log("response", responseStudentList);
+      
+  
       setAlunos(responseStudentList);
       setLoading(false);
     } catch (error) {
