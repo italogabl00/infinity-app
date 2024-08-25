@@ -120,7 +120,7 @@ function Alunos() {
   
         {alunoEncontrado && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-center items-center">
-            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-8 py-6 gap-6 bg-inallblack w-[50vw] h-[40vh]">
+            <div className="flex flex-col relative border border-solid border-inred rounded-xl px-8 py-6 gap-6 bg-inallblack w-[60vw] h-[40vh] mt-16">
   <div className="flex items-center justify-between mb-4">
     <h3 className="text-xl font-bold uppercase">
       Detalhes do Aluno
