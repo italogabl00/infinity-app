@@ -31,7 +31,7 @@ function Home() {
                         </p>
 
                         <div className='w-full'>
-                            <div className='mt-10 flex flex-row justify-start gap-x-4'>
+                            <div className='mt-10 mb-6   flex flex-row justify-start gap-x-4'>
                                 <Link to='/Professores' className='w-3/5 h-10 bg-inred transition hover:bg-indred rounded-3xl flex justify-center items-center text-sm'>
                                     <button className='uppercase'>Professores</button>
                                 </Link>

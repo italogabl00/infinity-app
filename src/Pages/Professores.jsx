@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FiAlignJustify } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import Switch from '../components/Switch';
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaInstagramSquare, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import { BiInfinite } from "react-icons/bi";
 
 function Professores() {
@@ -189,20 +189,28 @@ function Professores() {
                     {professor.formacao}
                 </p>
                 <div className="flex items-center gap-3">
-                    {professor.rede && professor.rede.split(", ").map((rede, i) => (
-                        <a
-                            key={i}
-                            href={rede}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaInstagramSquare
-                                size={24}
-                                style={{ color: "#292929" }}
-                            />
-                        </a>
-                    ))}
-                </div>
+    {professor.rede && professor.rede.split(", ").map((rede, i) => {
+        let Icon;
+        if (rede.includes("instagram.com")) {
+            Icon = FaInstagramSquare;
+        } else if (rede.includes("github.com")) {
+            Icon = FaGithubSquare;
+        } else if (rede.includes("linkedin.com")) {
+            Icon = FaLinkedin;
+        }
+
+        return (
+            <a
+                key={i}
+                href={rede}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Icon size={24} style={{ color: "#292929" }} />
+            </a>
+        );
+    })}
+</div>
                 <div className="mt-4 flex items-center gap-6">
                     <div className="flex items-center gap-1">
                         <p>07</p>
