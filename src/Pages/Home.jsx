@@ -32,11 +32,11 @@ function Home() {
 
                         <div className='w-full'>
                             <div className='mt-10 mb-6   flex flex-row justify-start gap-x-4'>
-                                <Link to='/Professores' className='w-3/5 h-10 bg-inred transition hover:bg-indred rounded-3xl flex justify-center items-center text-sm'>
+                                <Link to='/professores' className='w-3/5 h-10 bg-inred transition hover:bg-indred rounded-3xl flex justify-center items-center text-sm'>
                                     <button className='uppercase'>Professores</button>
                                 </Link>
 
-                                <Link className='w-3/5 h-10 bg-inblack hover:bg-inallblack border-solid border-2 rounded-3xl border-inred hover:border-indred transition text-sm flex justify-center items-center' to={'/Certificado'}>
+                                <Link className='w-3/5 h-10 bg-inblack hover:bg-inallblack border-solid border-2 rounded-3xl border-inred hover:border-indred transition text-sm flex justify-center items-center' to='/certificado'>
                                     <button className='uppercase'>Certificados</button>
                                 </Link>
                             </div>
