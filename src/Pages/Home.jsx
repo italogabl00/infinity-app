@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      <div className="relative sm:bg-gradient-to-b from-inred via-20% via-[#e5402e78] to-70%">
-        <div className="bg-inblack text-white min-h-[57rem] bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-start justify-start pl-4">
+      <div className="sm:bg-gradient-to-b from-inred via-20% via-[#e5402e78] to-70% h-full flex min-h-full flex-col absolute w-full">
+        <div className="bg-inblack text-white bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-start justify-start pl-4 h-full min-h-full">
           <div className="relative sm:flex sm:flex-col sm:justify-center sm:items-start sm:px-1 2xl:px-16 4xl:px-28 py-6">
             <Logo />
           </div>
