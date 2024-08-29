@@ -31,7 +31,7 @@ const Switch = ({ className, onToggle }) => {
             "base-class",
             "transition-opacity duration-300",
             {
-              "opacity-10": !isSelected,
+              "opacity-30": !isSelected,
               "ml-2": !isSelected,
             }
           )}
@@ -40,7 +40,7 @@ const Switch = ({ className, onToggle }) => {
         </span>
         <span
           className={classNames("base-class", "transition-opacity duration-300", {
-            "opacity-10": isSelected,
+            "opacity-30": isSelected,
             "mr-2": isSelected,
            
           })}
