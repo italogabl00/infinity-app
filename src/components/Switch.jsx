@@ -39,11 +39,14 @@ const Switch = ({ className, onToggle }) => {
           TECHS
         </span>
         <span
-          className={classNames("base-class", "transition-opacity duration-300", {
-            "opacity-30": isSelected,
-            "mr-2": isSelected,
-           
-          })}
+          className={classNames(
+            "base-class",
+            "transition-opacity duration-300",
+            {
+              "opacity-30": isSelected,
+              "mr-2": isSelected,
+            }
+          )}
         >
           CRIATIVOS
         </span>
