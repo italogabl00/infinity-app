@@ -17,7 +17,7 @@ const Switch = ({ className, onToggle }) => {
     <div
       onClick={handleClick}
       className={classNames(
-        "flex w-60 h-10 text-inred bg-ingrey bg-opacity-60 rounded-md transition-all duration-500 outline outline-2 outline-ingrey",
+        "flex w-60 h-10 mb-36 text-inred bg-ingrey bg-opacity-60 rounded-md transition-all duration-500 outline outline-2 outline-ingrey",
         className
       )}
     >
