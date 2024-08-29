@@ -224,7 +224,7 @@ function Professores() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Icon size={24} style={{ color: "#292929" }} />
+                        <Icon size={24} style={{ color: "#FF0000" }} />
                       </a>
                     );
                   })}
