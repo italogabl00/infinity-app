@@ -17,7 +17,7 @@ const Switch = ({ className, onToggle }) => {
     <div
       onClick={handleClick}
       className={classNames(
-        "flex w-60 h-10 text-inred bg-ingrey bg-opacity-60 rounded-md transition-all duration-500 outline outline-2 outline-ingrey",
+        "flex w-60 h-10 mb-36 text-inred bg-ingrey bg-opacity-60 rounded-md transition-all duration-500 outline outline-2 outline-ingrey",
         className
       )}
     >
@@ -31,7 +31,7 @@ const Switch = ({ className, onToggle }) => {
             "base-class",
             "transition-opacity duration-300",
             {
-              "opacity-10": !isSelected,
+              "opacity-30": !isSelected,
               "ml-2": !isSelected,
             }
           )}
@@ -39,11 +39,14 @@ const Switch = ({ className, onToggle }) => {
           TECHS
         </span>
         <span
-          className={classNames("base-class", "transition-opacity duration-300", {
-            "opacity-10": isSelected,
-            "mr-2": isSelected,
-           
-          })}
+          className={classNames(
+            "base-class",
+            "transition-opacity duration-300",
+            {
+              "opacity-30": isSelected,
+              "mr-2": isSelected,
+            }
+          )}
         >
           CRIATIVOS
         </span>

@@ -148,8 +148,8 @@ function Professores() {
           </ul>
         </div>
       )}
-    
-      <h1 className="mt-8 text-[220px] lg:text-[160px] lg:mt-6 md:text-[120px] md:mt-8 sm:text-[75px] sm:mt-12 sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm mb-5 font-bebas">
+
+      <h1 className="mt-12 text-[220px] lg:text-[160px] md:text-[120px] sm:text-[75px] sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm font-bebas leading-none">
         PROFESSORES
       </h1>
 
@@ -159,7 +159,7 @@ function Professores() {
           onToggle={handleToggleSwitch}
         />
 
-        <div className="mt-6 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12">
+        <div className="mt-6 mr-44 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12 justify-items-center">
           {filteredProfessoresCourse.map((professor) => (
             <div
               key={professor.id}
@@ -167,11 +167,12 @@ function Professores() {
                 isSwitchedOn &&
                 professor.area !== "TECH" &&
                 professor.area !== "CRIAT"
-                  ? " opacity-70" // Torna a área mais escura quando não está ativa
+                  ? " opacity-70"
                   : ""
               }`}
+              style={{ maxWidth: "300px", width: "100%" }} // Largura fixa para alinhamento consistente
             >
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col items-center justify-between mb-6">
                 <p className="text-lg tracking-widest font-bebas">
                   {isSwitchedOn
                     ? professor.area === "TECH"
@@ -189,17 +190,21 @@ function Professores() {
                   ))}
                 </div>
               </div>
-              <img
-                className="h-48 w-48 object-cover rounded-md mb-3"
-                src={professor.imgUrl}
-                alt={professor.nome}
-              />
-              <h4 className="font-extrabold text-xl mb-2 text-inred">
-                {professor.nome}
-              </h4>
-              <p className="text-md font-extralight mb-6">
-                {professor.formacao}
-              </p>
+
+              <div className="flex flex-col items-center h-full">
+                <img
+                  className="h-48 w-48 object-cover rounded-md mb-3"
+                  src={professor.imgUrl}
+                  alt={professor.nome}
+                />
+                <h4 className="font-extrabold text-xl mb-2 text-inred">
+                  {professor.nome}
+                </h4>
+                <p className="text-md font-extralight mb-6">
+                  {professor.formacao}
+                </p>
+              </div>
+
               <div className="flex items-center gap-3">
                 {professor.rede &&
                   professor.rede.split(", ").map((rede, i) => {
@@ -219,11 +224,12 @@ function Professores() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Icon size={24} style={{ color: "#292929" }} />
+                        <Icon size={24} style={{ color: "#FF0000" }} />
                       </a>
                     );
                   })}
               </div>
+
               <div className="mt-4 flex items-center gap-6">
                 <div className="flex items-center gap-1">
                   <p>07</p>
@@ -237,21 +243,15 @@ function Professores() {
             </div>
           ))}
         </div>
-        
       </section>
-      
-      </div>
-   
-   
+    </div>
   );
 }
 
 function NavLink({ label, onClick, active }) {
   return (
     <li
-      className={`cursor-pointer ${
-        active ? "text-inred" : "text-inwhite hover:text-ingrey"
-      }`}
+      className={`cursor-pointer ${active ? "text-inred" : "hover:text-inred"}`}
       onClick={() => onClick(label)}
     >
       {label}
