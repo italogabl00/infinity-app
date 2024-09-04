@@ -5,17 +5,17 @@ function Home() {
   return (
     <>
       <div className="relative sm:bg-gradient-to-b from-inred via-20% via-[#e5402e78] to-70%">
-        <div className="bg-inblack text-white min-h-[57rem] bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-start justify-start pl-4">
+        <div className="bg-inblack text-white min-h-full bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-start justify-start pl-4">
           <div className="relative sm:flex sm:flex-col sm:justify-center sm:items-start sm:px-1 2xl:px-16 4xl:px-28 py-6">
             <Logo />
           </div>
 
-          <div className="mt-56 ml-32 max-w-lg sm:flex sm:flex-col sm:justify-start sm:items-start sm:max-w-4/5">
+          <div className="sm:mt-0 mt-0 sm:ml-0 ml-32 max-w-lg sm:flex sm:flex-col sm:justify-start sm:items-start sm:max-w-4/5">
             <h3 className="text-5xl tracking-widest sm:tracking-wide sm:text-4xl sml:text-3xl 4xl:mb-[-3vw] lg:mb-[-6vw]">
               CONHEÇA <span className="text-inred">NOSSA</span>
             </h3>
 
-            <h1 className="z-10 font-bold text-[230px] sm:text-[170px] sml:text-[127px] font-bebas 4xl:mb-[-3.5vw] lg:mb-[-7vw]">
+            <h1 className="z-10 font-bold sm:text-[120px] text-[165px] sml:text-[127px] font-bebas 4xl:mb-[-3.5vw] lg:mb-[-7vw]">
               EQUIPE
             </h1>
 
