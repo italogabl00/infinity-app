@@ -15,7 +15,7 @@ function Home() {
               CONHEÇA <span className="text-inred">NOSSA</span>
             </h3>
 
-            <h1 className="z-10 font-bold sm:text-[120px] text-[165px] sml:text-[127px] font-bebas 4xl:mb-[-3.5vw] lg:mb-[-7vw]">
+            <h1 className="z-10 font-bold sm:text-[120px] text-[150px] sml:text-[127px] font-bebas 4xl:mb-[-3.5vw] lg:mb-[-7vw]">
               EQUIPE
             </h1>
 
