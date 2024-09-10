@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <div className="relative sm:bg-gradient-to-b from-inred via-20% via-[#e5402e78] to-70%">
-        <div className="bg-inblack text-white min-h-full bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 items-start justify-start pl-4 h-[94vh]">
+        <div className="bg-inblack text-white min-h-[53.9rem] bg-[url('../../public/imagens/fundo2.jpg')] bg-cover bg-no-repeat bg-opacity-10 items-start justify-start pl-4">
           <div className="relative sm:flex sm:flex-col sm:justify-center sm:items-start sm:px-1 2xl:px-16 4xl:px-28 py-6">
             <Logo />
           </div>
@@ -19,12 +19,12 @@ function Home() {
               EQUIPE
             </h1>
 
-            <p className="mt-4 font-sans sml:text-sm leading-tight">
+            <p className="mt-4 font-sans sml:text-sm text-[19px]">
               Nossa equipe de professores é apaixonada por orientar os alunos em
               seu desenvolvimento criativo.
             </p>
 
-            <p className="mt-4 sml:text-sm leading-tight">
+            <p className="mt-4 sml:text-sm text-[19px]">
               Combinando experiência e dedicação, estamos aqui para inspirar,
               apoiar e capacitar cada aluno em sua jornada de aprendizagem.
               Juntos, cultivamos talentos e preparamos os alunos para alcançarem

@@ -100,7 +100,7 @@ function Alunos() {
   }
 
   return (
-    <div className="bg-inblack text-white min-h-[94vh] bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-center justify-start overflow-hidden">
+    <div className="bg-inblack text-white min-h-[93.9vh] bg-[url('../../public/imagens/fundo.jpg')] bg-cover bg-no-repeat bg-opacity-10 flex flex-col items-center justify-start overflow-hidden">
       <Inf />
       <div className="w-full max-w-[1280px] mx-auto py-16 mt-10 h-full min-h-[11rem]">
         <h2 className="text-2xl font-bold mb-4 text-center uppercase">
