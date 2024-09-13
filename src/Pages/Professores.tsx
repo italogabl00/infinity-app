@@ -79,7 +79,7 @@ function Professores() {
           to="/"
           className="mt-8 ml-5 text-white bg-inred px-6 py-2 rounded-md font-bold mb-8"
         >
-          <button className="uppercase">Home</button>
+          <button className="sm:w-28 uppercase">Home</button>
         </Link>
         <button
           className="invisible md:visible absolute top-3 right-4"
@@ -161,7 +161,7 @@ function Professores() {
           onToggle={handleToggleSwitch}
         />
 
-        <div className="mt-6 mr-44 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12 justify-items-center">
+        <div className=" mt-6 mr-44 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12 justify-items-center">
           {filteredProfessoresCourse.map((professor) => (
             <div
               key={professor.id}
