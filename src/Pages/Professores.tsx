@@ -68,7 +68,7 @@ function Professores() {
     <div className="sm:min-h-full min-h-full w-full flex flex-col items-center justify-center bg-gradient-to-b from-inallblack to-inblack text-inwhite overflow-hidden">
       <header className="bg-inblack md:bg-inred flex items-center z-30 justify-between fixed top-0 w-full shadow-md h-16">
         <div className="md:flex items-center justify-center w-full hidden">
-          <h3 className="uppercase font-extrabold text-2xl">{activeOption}</h3>
+          <h3 className="uppercase font-extrabold text-2xl md:pl-16">{activeOption}</h3>
         </div>
         <img
           src="/public/imagens/logoblack.png"
@@ -151,11 +151,10 @@ function Professores() {
         </div>
       )}
 
-      <h1 className="mt-12 text-[220px] lg:text-[160px] md:text-[120px] sm:text-[75px] sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm font-bebas leading-none">
-        PROFESSORES
-      </h1>
-
-      <section className="min-h-[50vh] sm:space-x-3 w-full flex justify-center items-center p-12 sm:p-4 relative drop-shadow-xl">
+      <section className="min-h-[50vh] sm:space-x-3 w-full flex flex-col justify-center items-center p-12 sm:p-4 relative drop-shadow-xl">
+        <h1 className="sm:pt-8 mt-12 text-[220px] lg:text-[160px] md:text-[120px] sm:text-[75px] sml:text-[65px] font-bold tracking-wider text-ingrey drop-shadow-sm font-bebas leading-none">
+          PROFESSORES
+        </h1>
         <Switch
           className="absolute top-4 left-12 cursor-pointer"
           onToggle={handleToggleSwitch}

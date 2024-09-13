@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-4 text-center text-sm sticky top-[100vh] w-[100vw] bg-inallblack text-inwhite">
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center px-4 gap-3">
         <div className="flex-grow text-center">
           <p>&copy; 2024 - Infinity School, todos os direitos reservados.</p>
         </div>

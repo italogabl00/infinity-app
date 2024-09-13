@@ -11,7 +11,7 @@ const Header: React.FC = (): JSX.Element => {
   };
 
   return (
-    <header className="bg-inblack md:bg-inred md:min-w-[100vw] flex items-center z-30 justify-between fixed top-0 w-full shadow-md h-12">
+    <header className="bg-inblack md:bg-inred md:min-w-[100vw] flex flex-row items-center z-30 justify-between fixed top-0 w-full shadow-md h-12">
       <button className="md:hidden" onClick={handleToggleMenu}>
         <img
           className="h-4"
