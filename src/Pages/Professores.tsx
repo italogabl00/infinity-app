@@ -68,7 +68,9 @@ function Professores() {
     <div className="sm:min-h-full min-h-full w-full flex flex-col items-center justify-center bg-gradient-to-b from-inallblack to-inblack text-inwhite overflow-hidden">
       <header className="bg-inblack md:bg-inred flex items-center z-30 justify-between fixed top-0 w-full shadow-md h-16">
         <div className="md:flex items-center justify-center w-full hidden">
-          <h3 className="uppercase font-extrabold text-2xl md:pl-16">{activeOption}</h3>
+          <h3 className="uppercase font-extrabold text-2xl md:pl-16">
+            {activeOption}
+          </h3>
         </div>
         <img
           src="/public/imagens/logoblack.png"
@@ -156,11 +158,11 @@ function Professores() {
           PROFESSORES
         </h1>
         <Switch
-          className="absolute top-4 left-12 cursor-pointer"
+          className="sm:flex sm:flex-col left-12 cursor-pointer"
           onToggle={handleToggleSwitch}
         />
 
-        <div className="mt-6 mr-44 grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto sm:mt-12 ">
+        <div className="mb-28  grid grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 row-auto ">
           {filteredProfessoresCourse.map((professor) => (
             <div
               key={professor.id}
